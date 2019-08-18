@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Toolkit;
 
 import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
 
 import com.wireworld.mvc.controller.SimulationThread;
 import com.wireworld.mvc.controller.WorldKeyListener;
@@ -12,14 +13,17 @@ import com.wireworld.mvc.view.WireworldGUI;
 import com.wireworld.mvc.view.WorldGrid;
 
 public class Main {
+	public static final String fileType = ".w";
+	private static int rows = 64, cols = 128, cellSize = 12;
+
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
-				int rows = 64;
-				int cols = 128;
-				int cellSize = 10;
-
+				rows = 64;
+				cols = 128;
+				cellSize = 12;
+				
 				WorldGrid worldGrid = new WorldGrid(rows, cols, cellSize);
 				Wireworld wireworld = Wireworld.getInstance();
 
