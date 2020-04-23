@@ -10,6 +10,8 @@ import com.wireworld.core.Cell;
  * Created by nicola on 29/08/14.
  */
 public class WorldCell extends JLabel {
+	private static final long serialVersionUID = -2744303329467330583L;
+
 	private int x, y;
 	private Cell.State state;
 

@@ -5,6 +5,8 @@ import java.util.Collection;
 import java.util.HashMap;
 
 public class Grid implements Serializable{
+	private static final long serialVersionUID = 4142192661901104663L;
+
 	private HashMap<Coordinate, Cell> grid;
 
 	public Grid() {

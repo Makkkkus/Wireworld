@@ -17,6 +17,8 @@ import com.wireworld.mvc.model.WorldCell;
 import com.wireworld.utils.Pair;
 
 public class WorldGrid extends JPanel implements Observer {
+	private static final long serialVersionUID = 8591351883511324431L;
+
 	private WorldCell[][] worldGrid;
 	private ChangeGridSubject observable;
 

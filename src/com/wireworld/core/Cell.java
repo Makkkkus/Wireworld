@@ -3,11 +3,12 @@ package com.wireworld.core;
 import java.io.Serializable;
 
 /**
- * A wireworld Cell can assume one of four state in
- * a generation: EMPTY, ELECTRON_HEAD, ELECTRON_TAIL
- * and CONDUCTOR
+ * A wireworld Cell can assume one of four state in a generation: EMPTY,
+ * ELECTRON_HEAD, ELECTRON_TAIL and CONDUCTOR
  */
 public class Cell implements Serializable {
+	private static final long serialVersionUID = -8531411305246066479L;
+
 	public static enum State {
 		EMPTY,
 		ELECTRON_HEAD,
@@ -15,7 +16,6 @@ public class Cell implements Serializable {
 		CONDUCTOR
 	}
 
-	private int x, y;
 	private State state;
 	private int neighbourgs;
 
@@ -48,9 +48,12 @@ public class Cell implements Serializable {
 	}
 
 	public boolean equals(Object obj) {
-		if (obj == null) return false;
-		if (!(obj instanceof Cell)) return false;
-		if (this == obj) return true;
+		if (obj == null)
+			return false;
+		if (!(obj instanceof Cell))
+			return false;
+		if (this == obj)
+			return true;
 		Cell cell = (Cell) obj;
 		return this.state.equals(cell.state);
 	}

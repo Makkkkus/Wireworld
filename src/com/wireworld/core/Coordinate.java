@@ -4,6 +4,8 @@ package com.wireworld.core;
 import java.io.Serializable;
 
 public class Coordinate implements Serializable {
+	private static final long serialVersionUID = -5630899240997071099L;
+
 	private int x, y;
 
 	public Coordinate(int x, int y) {
